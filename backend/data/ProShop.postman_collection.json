@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "d36a0aa4-44e1-4f32-9173-ddefc89f45a4",
+		"name": "ProShop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get all products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/products",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get product by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/products/5f79f09777f7234bd4c6eb67",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"5f79f09777f7234bd4c6eb67"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
