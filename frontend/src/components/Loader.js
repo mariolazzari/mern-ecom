@@ -8,13 +8,10 @@ const style = {
   display: "block",
 };
 
-const Loader = () =>
-  <Spinner
-    animation="border"
-    role="status"
-    style={style}
-  >
+const Loader = () => (
+  <Spinner animation="border" role="status" style={style}>
     <span className="sr-only">Loading...</span>
-  </Spinner>;
+  </Spinner>
+);
 
 export default Loader;
