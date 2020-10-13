@@ -2,6 +2,7 @@ import jwt from "jsonwebtoken";
 import asyncHandler from "express-async-handler";
 import User from "../models/userModel.js";
 
+// protect route
 const protect = asyncHandler(async (req, res, next) => {
   let token;
   const { authorization } = req.headers;
@@ -25,6 +26,7 @@ const protect = asyncHandler(async (req, res, next) => {
   }
 });
 
+// admin only route
 const admin = (req, res, next) => {
   if (req.user && req.user.isAdmin) {
     next();
