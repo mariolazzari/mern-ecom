@@ -6,6 +6,174 @@
 	},
 	"item": [
 		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Get all orders",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "05f6a7dc-83d1-4041-af9a-c0119cb4b005",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/orders",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get order by ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "05f6a7dc-83d1-4041-af9a-c0119cb4b005",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/orders/myorders",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"myorders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get my orders",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "05f6a7dc-83d1-4041-af9a-c0119cb4b005",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/orders/myorders",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"orders",
+								"myorders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new order",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "05f6a7dc-83d1-4041-af9a-c0119cb4b005",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/orders",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
 			"name": "Products",
 			"item": [
 				{
@@ -99,7 +267,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"mario@example.com\",\r\n    \"password\":\"12345\"\r\n}",
+							"raw": "{\r\n    \"email\":\"admin@example.com\",\r\n    \"password\":\"123456\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -192,6 +360,63 @@
 								"api",
 								"users",
 								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/users/5f84add75ab6c226d427139d",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"5f84add75ab6c226d427139d"
 							]
 						}
 					},
