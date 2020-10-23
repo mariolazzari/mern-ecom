@@ -421,6 +421,44 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isAdmin\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/users/5f79f09777f7234bd4c6eb65",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"5f79f09777f7234bd4c6eb65"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
